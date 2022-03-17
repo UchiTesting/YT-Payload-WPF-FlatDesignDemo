@@ -35,6 +35,19 @@
                     Height="50"
                     Foreground="White"
                     FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
+                />
+                <RadioButton Content="Our Feature"
+                    Height="50"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
+                />
+                <RadioButton Content="About Us"
+                    Height="50"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
                 />
             </StackPanel>
             
