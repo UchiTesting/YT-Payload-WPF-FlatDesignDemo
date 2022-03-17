@@ -59,6 +59,10 @@
                      Style="{StaticResource SearchBoxTheme}"
                      />
 
+            <ContentControl Grid.Row="1" Grid.Column="1"
+                            Margin="10"
+                            />
+
         </Grid>
     </Border>
 </Window>
