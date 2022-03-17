@@ -27,11 +27,12 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0"
-                Text="FlatDesign" 
+                Text="Flat Design Demo" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
                 Foreground="White"
-                FontSize="22"
+                FontSize="24"
+                FontFamily="/Fonts/#Ramaraja"
                 
             />
 
