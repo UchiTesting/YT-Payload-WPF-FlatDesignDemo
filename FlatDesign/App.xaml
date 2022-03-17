@@ -15,6 +15,10 @@
             <DataTemplate DataType="{x:Type vm:HomeViewModel}">
                 <v:HomeView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:AboutUsViewModel}">
+                <v:AboutUsView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

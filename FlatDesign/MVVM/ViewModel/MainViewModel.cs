@@ -7,18 +7,41 @@ namespace FlatDesign.MVVM.ViewModel
     {
         private object _currentView;
 
+        #region Commands
+        public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand AboutUsViewCommand { get; set; }
+        #endregion
+
+        #region Related VMs
+        public AboutUsView AboutVm { get; set; }
         public HomeViewModel HomeVm { get; set; }
+        #endregion
+
         public object CurrentView
         {
             get { return _currentView; }
-            set { _currentView = value;
+            set
+            {
+                _currentView = value;
                 OnPropertyChanged();
             }
         }
 
-        public MainViewModel() {
+        public MainViewModel()
+        {
+            AboutVm = new AboutUsView();
             HomeVm = new HomeViewModel();
             CurrentView = new HomeViewModel();
+
+            HomeViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = HomeVm;
+            });
+
+            AboutUsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = AboutVm;
+            });
         }
     }
 }

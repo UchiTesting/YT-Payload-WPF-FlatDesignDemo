@@ -14,7 +14,7 @@
     <Window.DataContext>
         <vm:MainViewModel />
     </Window.DataContext>
-    
+
     <Border Background="#272537" CornerRadius="20">
         <Grid>
             <Grid.RowDefinitions>
@@ -41,6 +41,8 @@
                     Foreground="White"
                     FontSize="14"
                     Style="{StaticResource MenuButtonTheme}"
+                    IsChecked="True"
+                    Command="{Binding HomeViewCommand}"
                 />
                 <RadioButton Content="Our Feature"
                     Height="50"
@@ -53,6 +55,7 @@
                     Foreground="White"
                     FontSize="14"
                     Style="{StaticResource MenuButtonTheme}"
+                    Command="{Binding AboutUsViewCommand}"
                 />
             </StackPanel>
 
