@@ -60,13 +60,38 @@
                 />
             </StackPanel>
 
-            <TextBox Grid.Row="0" Grid.Column="1"
+            <Grid Grid.Row="0" Grid.Column="1"
+                        >
+
+                <TextBox 
                      Width="250" Height="40"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
                      Margin="5"
                      Style="{StaticResource SearchBoxTheme}"
                      />
+
+
+                <Border Width="40" Height="40"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,20,0"
+                    >
+                    <Border.Clip>
+                        <RectangleGeometry Rect="0,0,40,40"
+                                           RadiusX="10"
+                                           RadiusY="10" />
+                    </Border.Clip>
+                <Button
+                    Width="40" Height="40"
+                    Foreground="White"
+                    Background="Red"
+                    Content="✖"
+                    FontSize="20"
+                    BorderThickness="0"
+                    Command="{Binding CloseApplicationViewCommand}"
+                    />
+                </Border>
+            </Grid>
 
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
