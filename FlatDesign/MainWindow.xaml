@@ -10,6 +10,7 @@
         Background="Transparent"
         AllowsTransparency="True"
         xmlns:vm="clr-namespace:FlatDesign.MVVM.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         >
     <Window.DataContext>
         <vm:MainViewModel />
@@ -27,6 +28,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0"
+                       x:Name="LogoText"
                 Text="Flat Design Demo" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
@@ -34,7 +36,14 @@
                 FontSize="24"
                 FontFamily="/Fonts/#Ramaraja"
                 
-            />
+            >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDown" SourceObject="{Binding LogoText}">
+                        <i:InvokeCommandAction Command="{Binding MoveWindowViewCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                
+            </TextBlock>
 
             <StackPanel Grid.Row="1" Grid.Column="0">
                 <RadioButton Content="Home"

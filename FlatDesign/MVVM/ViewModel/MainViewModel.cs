@@ -11,6 +11,8 @@ namespace FlatDesign.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand AboutUsViewCommand { get; set; }
         public RelayCommand CloseApplicationViewCommand { get; set; }
+
+        public RelayCommand MoveWindowViewCommand { get; set; }
         #endregion
 
         #region Related VMs
@@ -45,6 +47,10 @@ namespace FlatDesign.MVVM.ViewModel
             });
 
             CloseApplicationViewCommand = new RelayCommand((o) => { App.Current.Shutdown(); });
+
+            MoveWindowViewCommand = new RelayCommand(o => {
+                App.Current.MainWindow.DragMove();
+            });
         }
     }
 }
