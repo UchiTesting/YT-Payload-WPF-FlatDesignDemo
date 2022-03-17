@@ -25,24 +25,82 @@
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,400,200"/> 
+                                       Rect="0,0,400,200"/>
                 </Border.Clip>
 
                 <Grid>
-                    <StackPanel>
-                        <TextBlock Text="World Leader&#x0a;in Testing"
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+
+                            <TextBlock Text="World Leader&#x0a;in Testing"
                                    Foreground="White"
                                    FontSize="28"
                                    Margin="20,10,10,0"
                                    />
-                        <TextBlock Text="Call us today!"
+                            <TextBlock Text="Call us today!"
                                    Foreground="White"
                                    FontSize="18"
                                    Margin="20,10,10,0"
                                    />
+                        </StackPanel>
+
+                        <Image Source="/Images/Testing.png"
+                               Width="185" Height="80" 
+                               Stretch="Fill"
+                               Margin="0,0,10,0"
+                               />
                     </StackPanel>
                 </Grid>
             </Border>
+            <Border Width="200" Height="200"
+                                Margin="24,0,0,0"
+                                CornerRadius="10"
+                                >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="Beige" Offset="0.0"/>
+                        <GradientStop Color="Coral" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </StackPanel>
+        <StackPanel>
+
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="8,5,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <TextBlock Text="Most popular"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="0,5,0,0"
+                       />
+            <StackPanel Orientation="Horizontal">
+                <Border Width="150" Height="150"
+                                Margin="0,5,0,0"
+                                CornerRadius="10"
+                        Background="#ff30ff"
+                                >
+                </Border>
+                <Border Width="150" Height="150"
+                                CornerRadius="10"
+                        Background="#ffff30"
+                                >
+                </Border>
+                <Border Width="150" Height="150"
+                                CornerRadius="10"
+                        Background="#30ff30"
+                                >
+                </Border>
+                <Border Width="150" Height="150"
+                                CornerRadius="10"
+                        Background="#30c0ff"
+                                >
+                </Border>
+                
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </UserControl>
