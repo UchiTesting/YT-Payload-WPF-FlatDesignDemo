@@ -9,7 +9,12 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
+        xmlns:vm="clr-namespace:FlatDesign.MVVM.ViewModel"
         >
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+    
     <Border Background="#272537" CornerRadius="20">
         <Grid>
             <Grid.RowDefinitions>
@@ -61,6 +66,7 @@
 
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
+                            Content="{Binding CurrentView}"
                             />
 
         </Grid>
